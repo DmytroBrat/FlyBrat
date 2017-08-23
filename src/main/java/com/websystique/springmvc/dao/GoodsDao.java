@@ -15,5 +15,5 @@ public interface GoodsDao {
 
     void deleteGoodById(int id);
 
-    //  Goods findById(int id);
+      Goods findById(int id);
 }

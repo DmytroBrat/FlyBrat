@@ -43,7 +43,7 @@
                     <td>${goods.id}</td>
                     <td>${goods.name}</td>
                     <td>${goods.description}</td>
-                    <td><a href="<c:url value='/delete-good-${goods.id}' />" class="btn btn-success custom-width">edit</a>
+                    <td><a href="<c:url value='/edit-good-${goods.id}' />" class="btn btn-success custom-width">edit</a>
                     </td>
                     <td><a href="<c:url value='/delete-good-${goods.id}' />"
                            class="btn btn-danger custom-width">delete</a>

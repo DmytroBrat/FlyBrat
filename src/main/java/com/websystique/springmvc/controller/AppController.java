@@ -291,7 +291,7 @@ lets go to upload View
         return "redirect:/goods";
     }
 
-    /*
+
     //edit Good
     @RequestMapping(value = {"/edit-good-{id}"}, method = RequestMethod.GET)
     public String editGood(@PathVariable int id, ModelMap model) {
@@ -300,12 +300,12 @@ lets go to upload View
         model.addAttribute("edit", true);
         model.addAttribute("loggedinuser", getPrincipal());
 
-        return "registration";
+        return "newGood";
     }
 
 
     @RequestMapping(value = {"/edit-good-{id}"}, method = RequestMethod.POST)
-    public String updateUser(@Valid Goods user, BindingResult result,
+    public String updateUser(@Valid Goods good, BindingResult result,
                              ModelMap model, @PathVariable int id) {
 
         if (result.hasErrors()) {
@@ -313,13 +313,12 @@ lets go to upload View
         }
 
 
-        goodsService.updateUser(user);
+        goodsService.updateGood(good);
 
-        model.addAttribute("success", "User " + user.getFirstName() + " " + user.getLastName() + " updated successfully");
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "registrationsuccess";
+        model.addAttribute("success", "User " + good.getName() + " " + good.getDescription() + " updated successfully");
+        return "newGoodSuccess";
     }
-    */
+
 }
 
 /*

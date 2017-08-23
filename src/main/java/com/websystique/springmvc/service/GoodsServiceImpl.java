@@ -32,10 +32,19 @@ public class GoodsServiceImpl implements GoodsService {
         dao.deleteGoodById(id);
     }
 
-    /*
+    @Override
+    public void updateGood(Goods good) {
+        Goods entity = dao.findById(good.getId());
+        if (entity != null) {
+            entity.setId(good.getId());
+            entity.setDescription(good.getDescription());
+            entity.setName(good.getName());
+        }
+    }
+
     @Override
     public Goods findById(int id) {
-            return dao.findById(id);
+        return dao.findById(id);
     }
-    */
+
 }

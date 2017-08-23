@@ -21,6 +21,8 @@ public class Goods implements Serializable {
     @Column(name = "description", unique = false, nullable = true)
     private String description;
 
+    @Column(name = "typeid", unique = false, nullable = false)
+    private int typeid;
   /*  private Set<Goods> goodsProfiles = new HashSet<Goods>();
 
     public Set<Goods> getGoodsProfiles() {
@@ -56,6 +58,13 @@ public class Goods implements Serializable {
         this.description = description;
     }
 
+    public int getTypeid() {
+        return typeid;
+    }
+
+    public void setTypeid(int typeid) {
+        this.typeid = typeid;
+    }
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -87,6 +96,7 @@ public class Goods implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", typeid=" + typeid +
                 '}';
     }
 }

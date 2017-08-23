@@ -58,16 +58,13 @@ public class GoodsDaoImpl extends AbstractDao<Integer, Goods> implements GoodsDa
         Goods good = (Goods) crit.uniqueResult();
         delete(good);
     }
-/*
+
     @Override
     public Goods findById(int id) {
 
         Goods good = getByKey(id);
-        if (good != null) {
-            Hibernate.initialize(good.getGoodsProfiles());
-        }
         return good;
 
     }
-    */
+
 }
